@@ -63,7 +63,7 @@ const ProjectPage = ({ data }) => {
           </div>
         </div>
         <div className="px-10">
-        <GoogleReCaptchaProvider reCaptchaKey="6LdAVE4aAAAAAPyM7L_vk75OdGVaA7-dc8Lmokqb">
+        <GoogleReCaptchaProvider reCaptchaKey="6LfCenkdAAAAADS0P61jXEOZsd-aJpAlmh5yp9dq">
           <form action={page.FormURL} method="POST" onSubmit={validate}>
           
           <label className="text-sm font-sans font-bold text-gray-700 uppercase">Full Name</label>

@@ -17,7 +17,7 @@ const ProjectPage = ({ data: { allStrapiProject } }) => {
             <p className="text-black mb-5">Here are some websites I've built for clients.</p>
           </div>
       </div>
-      <div className="container mx-auto grid grid-cols-2 gap-4 pb-20">
+      <div className="container mx-auto grid px-5 md:px-0 md:grid-cols-2 gap-4 pb-20">
           
           {
             projects.map((project) => <div key={`photo-${project.node.id}`} className="relative">

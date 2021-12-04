@@ -18,7 +18,7 @@ const PhotographyPage = ({ data: { allStrapiPhoto } }) => {
             <p className="text-black">Here is my modest portfolio, which I hope to add to soon!</p>
           </div>
       </div>
-      <div className="container mx-auto grid grid-cols-2 gap-4 pb-20">
+      <div className="container mx-auto grid md:grid-cols-2 gap-4 px-5 md:px-0 pb-20">
           
           {
             photos.map((photo) => <div key={`photo-${photo.node.id}`} className="relative">

@@ -12,7 +12,7 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
   return (
     <Layout className="bg-red-500">
       <SEO seo={seo} />
-      <div className="bg-cover bg-fixed bg-center" style={{backgroundImage: 'url(https://res.cloudinary.com/meshed-nyc/birb.jpg)'}}>
+      <div className="bg-cover bg-fixed bg-center" style={{backgroundImage: 'url(https://res.cloudinary.com/meshed-nyc/c_fill/w_1600,q_auto/birb.jpg)'}}>
       <div className="container mx-auto flex h-screen items-center p-6 md:p-10">
         <div className="md:w-2/3">
 
@@ -22,7 +22,7 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
           <div className="mb-3"/>
           <h1 className="font-serif text-white inline bg-black">based in Queens, NY.</h1>
           <div className="mb-3"/>
-          <p className="text-sm text-gray-800 inline">I also took this photo of this hawk at the Unisphere.</p>
+          <p className="text-sm text-gray-100 inline">I also took this photo of this hawk at the Unisphere.</p>
         </div>
 
       </div>
@@ -104,7 +104,7 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
             <img src="https://res.cloudinary.com/meshed-nyc/image/upload/v1638307749/dave_t4vbsk.jpg"/>
           </div>
       </div>
-      <div className="text-black md:col-span-2">
+      <div className="text-black md:col-span-2 mb-5">
           <h1 className="mb-5 font-serif bg-black text-white inline">About me</h1>
           <p className="my-5">I grew up in Forest Hills, Queens, NY.</p>
           <p className="mb-5">After graduating from university in 2006, I got my start as a junior web developer at Sotheby's.</p>
@@ -113,10 +113,10 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
           
         </div>
         <div className="block md:hidden pt-10 relative mb-32 flex justify-center items-center">
-        <div className="bg-red-500 block  w-64 h-64 overflow-hidden  flex justify-center items-end">&nbsp;</div>
-          <div className="bg-red-500 block  w-64 h-64 absolute -mt-4  ml-4 overflow-hidden flex justify-center items-end">
-            <img src="https://res.cloudinary.com/meshed-nyc/image/upload/v1638307749/dave_t4vbsk.jpg"/>
-          </div>
+       
+          
+            <img src="https://res.cloudinary.com/meshed-nyc/image/upload/v1638307749/dave_t4vbsk.jpg" className="w-full"/>
+         
       </div>
       </div>
 
