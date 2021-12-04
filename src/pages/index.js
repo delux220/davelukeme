@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import Layout from "~/components/layout"
 import SEO from "~/components/seo"
@@ -29,14 +29,19 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
       </div>
 
 
-      <div className="container mx-auto grid md:grid-cols-3 md:px-10 mb-20 py-32">
+      <div className="container mx-auto grid md:grid-cols-3 md:px-10 md:mb-20 py-32">
+      <div className="block md:hidden flex relative items-center justify-center px-10 mb-10">
+          
+            <img src="https://res.cloudinary.com/meshed-nyc/image/upload/v1638307749/bagel-square_yqsxz4.jpg" className="w-full" />
+        
+        </div>
       <div className="md:col-span-2 px-10 flex items-center md:mb-0 mb-10">
           <div className="">
           <h1 className="font-serif mb-5 inline bg-black text-white">Build a website like Bagel</h1>
           <p className="font-sans my-5">
             Bagel is my 13 year old puggle. At her sweet old age, she's laid back and carefree. But she's speedy and responsive when she needs to be, especially when food is present!
           </p>
-          <h3 className="font-serif inline bg-black text-white">You may need a reliable website that is also speedy and responsive!</h3>
+          <h3 className="font-serif inline bg-black text-white py-1">You may need a reliable website that is also speedy and responsive!</h3>
           <div/>
           <p className="font-sans my-5">
             <a href="https://www.gatsbyjs.com/why-gatsby/" target="_blank">Gatsby</a> is a modern web technology that creates fast static websites.
@@ -52,9 +57,9 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
           </p>
           </div>
         </div>
-        <div className="flex relative items-center justify-center">
+        <div className="hidden md:block flex relative items-center justify-center">
           <div className="bg-red-500 block w-64 h-64 overflow-hidden">&nbsp;</div>
-          <div className="bg-red-500 block w-64 h-64 overflow-hidden absolute -mt-5 -ml-5 flex justify-center items-end">
+          <div className="bg-red-500 block w-64 h-64 overflow-hidden absolute -mt-60 -ml-4 flex justify-center items-end">
             <img src="https://res.cloudinary.com/meshed-nyc/image/upload/v1638307749/bagel-square_yqsxz4.jpg" />
           </div>
         </div>
@@ -88,7 +93,7 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
           </div>
         </div>
         <div className="text-center ">
-          <a href="#" className="border py-5 px-10 text-white font-sans">Contact me</a>
+          <Link href="/contact" className="border py-5 px-10 text-white font-sans">Contact me</Link>
         </div>
       </div>
 
@@ -117,22 +122,11 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
 
 
       <div className="bg-white  pb-20">
-      <div className="container mx-auto p-6 md:p-10 md:grid-cols-2 grid">
-        <div>
+      <div className="container mx-auto p-6 md:p-10 ">
+        <div className="text-center">
           <h1 className="font-serif mb-5 bg-red-500 text-white inline">Ready to build a sweet site?</h1>
-          <h3 className="font-serif my-5">Reach out to me to see what I can do for you!</h3>
-        </div>
-        <div>
-        <form action="">
-          
-          <label className="text-sm font-sans font-bold text-gray-700 uppercase">Full Name</label>
-          <input type="text" className="font-serif block border-b p-5 w-full mb-5" placeholder="Your name"/>
-          <label className="text-sm font-sans font-bold text-gray-700 uppercase">Email Address</label>
-          <input type="email" className="block border-b p-5 w-full font-serif mb-5" placeholder="you@email.com"/>
-          <label className="text-sm font-sans font-bold text-gray-700 uppercase">Message</label>
-          <textarea className="block w-100 border-b p-5 w-full font-serif mb-5" rows="4" placeholder="Hello, and pleased to meet you!"></textarea>
-          <button className="bg-black py-5 px-10 text-white font-sans">Submit</button>
-        </form>
+          <h3 className="font-serif mt-5 mb-10">Reach out to me to see what I can do for you!</h3>
+          <Link href="/contact" className="bg-black py-5 px-10 text-white font-sans">Contact me</Link>
         </div>
       </div>
       </div>
