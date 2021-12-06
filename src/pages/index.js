@@ -12,7 +12,7 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
   return (
     <Layout className="bg-red-500">
       <SEO seo={seo} />
-      <div className="bg-cover bg-fixed bg-center" style={{backgroundImage: 'url(https://res.cloudinary.com/meshed-nyc/c_fill/w_1600,q_auto/birb.jpg)'}}>
+      <div className="bg-cover bg-center" style={{backgroundImage: 'url(https://res.cloudinary.com/meshed-nyc/c_fill/w_1600,q_auto/birb.jpg)'}}>
       <div className="container mx-auto flex h-screen items-center p-6 md:p-10">
         <div className="md:w-2/3">
 
@@ -37,23 +37,19 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
         </div>
       <div className="md:col-span-2 px-10 flex items-center md:mb-0 mb-10">
           <div className="">
-          <h1 className="font-serif mb-5 inline bg-black text-white">Build a website like Bagel</h1>
+          <h1 className="font-serif mb-5 inline bg-black text-white">Build a website that is like Bagel dog</h1>
           <p className="font-sans my-5">
-            Bagel is my 13 year old puggle. At her sweet old age, she's laid back and carefree. But she's speedy and responsive when she needs to be, especially when food is present!
-          </p>
-          <h3 className="font-serif inline bg-black text-white py-1">You may need a reliable website that is also speedy and responsive!</h3>
+            Bagel is my 13 year old puggle. Despite her age, she is quick and agile and commands your attention. Especially if food is present!
+          You may need a reliable website that is also fast, responsive, and commands your visitors' attention!</p>
           <div/>
           <p className="font-sans my-5">
-            <a href="https://www.gatsbyjs.com/why-gatsby/" target="_blank">Gatsby</a> is a modern web technology that creates fast static websites.
+            I specialize in building sites with <a href="https://www.gatsbyjs.com/why-gatsby/" className="text-red-500" target="_blank">Gatsby</a>, a modern web technology that creates fast static websites. Each clicked link loads the next page instantly!</p>
+          <p className="font-sans mb-5 hidden">
+           This is because, whenever content is updated on a Gatsby site, the entire site is automatically regenerated. Typically, when you load a page on a website, there's a lot happening in the backend to display what you ultimately see on the page. Gatsby reloads all the dynamic content when updated, so when visitors hit your site, it no longer needs to do any heavy lifting. 
           </p>
-          <p className="font-sans mb-5">
-            Each clicked link loads the next page instantly!
-          </p>
-          <p className="font-sans mb-5">
-            This technology yields great performance, and can benefit many types of websites.
-          </p>
+          
           <p className="font-sans font-bold">
-            Reach out to me, to inquire if Gatsby is right for your website!
+            <Link to={'/contact'} className="text-red-500">Reach out to me</Link>, to inquire if Gatsby is right for your website!
           </p>
           </div>
         </div>
@@ -93,7 +89,7 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
           </div>
         </div>
         <div className="text-center ">
-          <Link href="/contact" className="border py-5 px-10 text-white font-sans">Contact me</Link>
+          <Link to="/contact" className="border py-5 px-10 text-white font-sans">Contact me</Link>
         </div>
       </div>
 
@@ -108,7 +104,7 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
           <h1 className="mb-5 font-serif bg-black text-white inline">About me</h1>
           <p className="my-5">I grew up in Forest Hills, Queens, NY.</p>
           <p className="mb-5">After graduating from university in 2006, I got my start as a junior web developer at Sotheby's.</p>
-          <p className="mb-5">Upon leaving the company in 2009, I made my bread-and-butter building websites, mobile apps, Shopify plugins, and everything inbetween. I've developed an entire dropshipping system that allows third party merchants to sell a client's products seamlessly as if it were their own.</p>
+          <p className="mb-5">Upon leaving the company in 2009, I went freelance building websites, mobile apps, Shopify plugins, and everything inbetween. I've developed an entire <a href="https://dropshipbeauty.app" target="_blank" className="text-red-500">dropshipping system</a> that allows <a className="text-red-500" href="https://www.shopify.com" target="_blank">Shopify</a> merchants to sell a client's products seamlessly as if it were their own.</p>
           <p className="mb-5">My general approach to building sites for small businesses or individuals is that "simple is bettter." We are fortunate to live in a time when the speed of technology is well beyond our expectations. However, it is important to understand the basic needs of the person or business to not overcomplicate the solution!</p>
           
         </div>
@@ -124,9 +120,9 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
       <div className="bg-white  pb-20">
       <div className="container mx-auto p-6 md:p-10 ">
         <div className="text-center">
-          <h1 className="font-serif mb-5 bg-red-500 text-white inline">Ready to build a sweet site?</h1>
+          <h1 className="font-serif mb-5 bg-red-500 text-white inline">Ready to build something cool?</h1>
           <h3 className="font-serif mt-5 mb-10">Reach out to me to see what I can do for you!</h3>
-          <Link href="/contact" className="bg-black py-5 px-10 text-white font-sans">Contact me</Link>
+          <Link to="/contact" className="bg-black py-5 px-10 text-white font-sans">Contact me</Link>
         </div>
       </div>
       </div>

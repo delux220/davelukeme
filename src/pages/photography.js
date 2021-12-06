@@ -15,7 +15,8 @@ const PhotographyPage = ({ data: { allStrapiPhoto } }) => {
         <h1 className="font-serif mt-20">Photography</h1>
         <div className=" p-10">
             <p className="text-black mb-5">While I am not a professional photographer, I do enjoy taking my camera around Queens.</p>
-            <p className="text-black">Here is my modest portfolio, which I hope to add to soon!</p>
+            <p className="text-black mb-5">Here is my modest portfolio, which I hope to add to soon!</p>
+            <p className="text-black">Yes, there's a lot of bird photos. I am not particularly a bird enthusiast. It just somehow turned out that way!</p>
           </div>
       </div>
       <div className="container mx-auto grid md:grid-cols-2 gap-4 px-5 md:px-0 pb-20">

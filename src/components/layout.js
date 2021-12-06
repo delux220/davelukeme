@@ -29,11 +29,7 @@ const Layout = ({ children , dark}) => {
         <main>{children}</main>
         <Footer />
       </div>
-      {openModal && (
-        <div className="h-screen max-w-screen-lg m-auto fixed bottom-0 top-0 right-0 left-0 px-6 pb-10 pt-20 md:p-10 md:pt-40">
-          <SearchResults setOpenModal={setOpenModal} openModal={openModal} />
-        </div>
-      )}
+      
     </div>
   )
 }

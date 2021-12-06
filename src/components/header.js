@@ -18,8 +18,7 @@ const Header = ({ setOpenModal, dark }) => {
        <ul>
           
        	<li className="float-right ml-10"><Link to={'/contact'}  className={`${textColor} font-sans font-normal uppercase border px-3 py-3`}>Contact</Link></li>
-       <li className="float-right ml-10"><Link to={'/'}  className={`${textColor} font-sans font-normal uppercase`}>Blog</Link></li>
-        <li className="float-right ml-10"><Link to={'/'}  className={`${textColor} font-sans font-normal uppercase`}>Tech</Link></li>
+        <li className="float-right ml-10"><Link to={'/tech'}  className={`${textColor} font-sans font-normal uppercase`}>Tech</Link></li>
 
         <li className="float-right ml-10"><Link to={'/photography'}  className={`${textColor} font-sans font-normal uppercase`}>Photography</Link></li>
         <li className="float-right ml-10"><Link to={'/#about'} className={`${textColor} font-sans font-normal uppercase`}>About</Link></li>
@@ -46,8 +45,7 @@ const Header = ({ setOpenModal, dark }) => {
       
 
         
-       <li ><Link to={'/'}  className={`text-black font-sans font-normal uppercase`}>Blog</Link></li>
-        <li ><Link to={'/'}  className={`text-black font-sans font-normal uppercase`}>Tech</Link></li>
+        <li ><Link to={'/tech'}  className={`text-black font-sans font-normal uppercase`}>Tech</Link></li>
 
         <li ><Link to={'/photography'}  className={`text-black font-sans font-normal uppercase`}>Photography</Link></li>
         <li ><Link to={'/contact'}  className={`text-black font-sans font-normal uppercase`}>Contact</Link></li>

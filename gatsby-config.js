@@ -37,7 +37,7 @@ module.exports = {
         apiURL: `https://warm-chamber-53453.herokuapp.com`,
         queryLimit: 1000, // Default to 100
         collectionTypes: [`product`, `category`, `project`, `photo`],
-        singleTypes: [`global`, `blog-page`, `contact-page`],
+        singleTypes: [`global`, `blog-page`, `contact-page`, `tech-page`],
       },
     },
     // You can have multiple instances of this plugin to create indexes with
