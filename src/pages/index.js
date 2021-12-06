@@ -8,7 +8,7 @@ import PageHeading from "~/components/styled/page-heading"
 
 const IndexPage = ({ data: { allStrapiCategory } }) => {
   const categories = allStrapiCategory.edges
-  const seo = { title: "Categories" }
+  const seo = { title: "Dave Luke, NYC based developer" }
   return (
     <Layout className="bg-red-500">
       <SEO seo={seo} />
@@ -104,7 +104,7 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
           <h1 className="mb-5 font-serif bg-black text-white inline">About me</h1>
           <p className="my-5">I grew up in Forest Hills, Queens, NY.</p>
           <p className="mb-5">After graduating from university in 2006, I got my start as a junior web developer at Sotheby's.</p>
-          <p className="mb-5">Upon leaving the company in 2009, I went freelance building websites, mobile apps, Shopify plugins, and everything inbetween. I've developed an entire <a href="https://dropshipbeauty.app" target="_blank" className="text-red-500">dropshipping system</a> that allows <a className="text-red-500" href="https://www.shopify.com" target="_blank">Shopify</a> merchants to sell a client's products seamlessly as if it were their own.</p>
+          <p className="mb-5">Upon leaving the company in 2009, I went freelance building websites, mobile apps, Shopify plugins, and everything inbetween. I have developed an entire <a href="https://dropshipbeauty.app" target="_blank" className="text-red-500">dropshipping system</a> that allows <a className="text-red-500" href="https://www.shopify.com" target="_blank">Shopify</a> merchants to sell my client's products seamlessly as if it were their own.</p>
           <p className="mb-5">My general approach to building sites for small businesses or individuals is that "simple is bettter." We are fortunate to live in a time when the speed of technology is well beyond our expectations. However, it is important to understand the basic needs of the person or business to not overcomplicate the solution!</p>
           
         </div>
