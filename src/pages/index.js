@@ -37,10 +37,10 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
         </div>
       <div className="md:col-span-2 px-10 flex items-center md:mb-0 mb-10">
           <div className="">
-          <h1 className="font-serif mb-5 inline bg-black text-white">Build a website that is like Bagel dog</h1>
+          <h1 className="font-serif mb-5 inline">I build websites that tell a story</h1>
           <p className="font-sans my-5">
-            Bagel is my 13 year old puggle. Despite her age, she is quick and agile and commands your attention. Especially if food is present!
-          You may need a reliable website that is also fast, responsive, and commands your visitors' attention!</p>
+            The websites I build are kind of like my puggle Bagel. Expressive, responsive, and fast!
+          </p>
           <div/>
           <p className="font-sans my-5">
             I specialize in building sites with <a href="https://www.gatsbyjs.com/why-gatsby/" className="text-red-500" target="_blank">Gatsby</a>, a modern web technology that creates fast static websites. Each clicked link loads the next page instantly!</p>
@@ -101,12 +101,13 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
           </div>
       </div>
       <div className="text-black md:col-span-2 mb-5">
-          <h1 className="mb-5 font-serif bg-black text-white inline">About me</h1>
-          <p className="my-5">I grew up in Forest Hills, Queens, NY.</p>
-          <p className="mb-5">After graduating from university in 2006, I got my start as a junior web developer at Sotheby's.</p>
-          <p className="mb-5">Upon leaving the company in 2009, I went freelance building websites, mobile apps, Shopify plugins, and everything inbetween. I have developed an entire <a href="https://dropshipbeauty.app" target="_blank" className="text-red-500">dropshipping system</a> that allows <a className="text-red-500" href="https://www.shopify.com" target="_blank">Shopify</a> merchants to sell my client's products seamlessly as if it were their own.</p>
-          <p className="mb-5">My general approach to building sites for small businesses or individuals is that "simple is bettter." We are fortunate to live in a time when the speed of technology is well beyond our expectations. However, it is important to understand the basic needs of the person or business to not overcomplicate the solution!</p>
-          
+          <h1 className="mb-5 font-serif">About me</h1>
+          <p className="my-5">I graduated from Stony Brook University in 2006, and landed my first web development job at a prestigious auction house, where I was given the opportunity to hone my skills and expand my craft as a developer.</p>
+          <p className="mb-5">The experience however was also a tumultuous one for me, a young adult at the time, perhaps unprepared for the demands of a corporate environment. After being part of massive layoffs in 2009, I had felt like a failure. I blamed myself, and couldn’t shake this belief that I hadn’t done enough.</p>
+          <p className="mb-5">It took time to see this event as something else: an opportunity to contemplate my own values, to focus on individual wellness, and to foster my own creativity.</p>
+          <p className="mb-5">I began to develop freelance, taking on contract work from mostly solo entrepreneurs. I started developing ideas of my own, quickly becoming the “idea guy” amongst my friends. The lesson was that there was another way!</p>
+          <p className="mb-5">I became passionate about helping others who set out to do their own thing. I’ve built websites for local artists, grass roots organizations, and solo entrepreneurs. I want to use my technical expertise to help people showcase what they are offering and help them reach their audience.</p>
+          <p>Reach out to me, so I can help you tell <strong className="italic">your story</strong>!</p>
         </div>
         <div className="block md:hidden pt-10 relative mb-32 flex justify-center items-center">
        
@@ -120,7 +121,7 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
       <div className="bg-white  pb-20">
       <div className="container mx-auto p-6 md:p-10 ">
         <div className="text-center">
-          <h1 className="font-serif mb-5 bg-red-500 text-white inline">Ready to build something cool?</h1>
+          <h1 className="font-serif mb-5 bg-black text-white inline">Ready to build something cool?</h1>
           <h3 className="font-serif mt-5 mb-10">Reach out to me to see what I can do for you!</h3>
           <Link to="/contact" className="bg-black py-5 px-10 text-white font-sans">Contact me</Link>
         </div>

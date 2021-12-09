@@ -3,7 +3,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ["Poppins"],
+      sans: ["proxima-nova"],
       serif: ["Libre Baskerville", "georgia", "serif"],
       slab: ["Alfa Slab One"]
     },
