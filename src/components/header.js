@@ -7,9 +7,13 @@ const Header = ({ setOpenModal, dark }) => {
   const [open, setOpen] = React.useState(false);
 
   const textColor = dark?'text-black':'text-white';
+  const otherColor = dark?'text-white':'text-black';
+
+  const bgColor = dark?'bg-white':'bg-black';
+  const otherBgColor = dark?'bg-black':'bg-white';
 
   return (
-    <header className="p-0 absolute w-full">
+    <header className="p-0 absolute w-full z-10">
       <div className="flex py-10 container mx-auto text-white items-center justify-between md:block hidden">
        <ul>
        	<li className="float-left"><Link to={'/'} className={`${textColor} font-sans font-bold uppercase`}>DAVE LUKE</Link></li>
@@ -17,7 +21,7 @@ const Header = ({ setOpenModal, dark }) => {
        
        <ul>
           
-       	<li className="float-right ml-10"><Link to={'/contact'}  className={`${textColor} font-sans font-normal uppercase border px-3 py-3`}>Contact</Link></li>
+       	<li className="float-right ml-10"><Link to={'/contact'}  className={`${otherColor} ${otherBgColor} font-sans font-normal uppercase px-5 py-3 rounded-full`}>Contact</Link></li>
         <li className="float-right ml-10"><Link to={'/tech'}  className={`${textColor} font-sans font-normal uppercase`}>Tech</Link></li>
 
         <li className="float-right ml-10"><Link to={'/photography'}  className={`${textColor} font-sans font-normal uppercase`}>Photography</Link></li>
