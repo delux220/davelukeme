@@ -10,57 +10,86 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
   const categories = allStrapiCategory.edges
   const seo = { title: "Dave Luke, NYC based developer" }
   return (
-    <Layout className="bg-red-500" dark>
+    <Layout className="bg-black">
+    <div className="bg-black">
       <SEO seo={seo} />
-      <div className="bg-cover bg-center relative" >
+      <div className="bg-cover bg-center relative" style={{backgroundImage:"url('https://res.cloudinary.com/meshed-nyc/image/upload/v1645540253/matthias-wagner-QrqeusbpFMM-unsplash_szsxzv.jpg')"}}>
       <div className="container mx-auto flex h-screen items-center p-6 md:p-10">
         <div className="text-center w-full">
 
-          <h1 className="font-serif mb-3">Hello! I'm Dave Luke,</h1>
+          <h1 className="font-serif mb-3 text-white">Showcase your comedy talents</h1>
           
-          <h1 className="font-serif">a web developer based in NYC.</h1>
+          <h3 className="font-serif text-white mb-5">with a sleek + easy to maintain website</h3>
           
-         
+          <button className="px-8 py-3 bg-blue-600 text-white font-sans rounded-full">Get Started for $250</button>
         </div>
         <div className="text-center absolute w-full" style={{bottom:0, left:0}}>
-        <ChevronDownIcon className="mx-auto animate-bounce h-10 w-10 block"/>
+        <ChevronDownIcon className="mx-auto animate-bounce h-10 w-10 block text-white opacity-50"/>
         </div>
       </div>
       </div>
 
-
+      <div className="bg-black">
       <div className="container mx-auto grid md:grid-cols-3 md:px-10 md:mb-20 py-32">
       <div className="block md:hidden flex relative items-center justify-center px-10 mb-10">
           
             <img src="https://res.cloudinary.com/meshed-nyc/image/upload/v1638307749/bagel-square_yqsxz4.jpg" className="w-full" />
         
         </div>
-      <div className="md:col-span-2 px-10 flex items-center md:mb-0 mb-10">
+      <div className="md:col-span-2 flex items-center md:mb-0 mb-10">
           <div className="">
-          <h1 className="font-serif mb-5 inline">Tell your story. I'll handle the tech.</h1>
-          <p className="font-sans my-5">
-            Let's build a beautiful website for your business, career, hobby, or side hustle!
-          </p>
-          <div/>
-          <p className="font-sans my-5">
-            I specialize in building sites with <a href="https://www.gatsbyjs.com/why-gatsby/" className="text-red-500" target="_blank">Gatsby</a>, a modern web technology that creates fast loading static websites. Gatsby is perfect for personal sites, blogs, and business sites. Many of these sites need to provide information to their visitors quickly and seamlessly.</p>
-          <p className="font-sans mb-5 hidden">
-           This is because, whenever content is updated on a Gatsby site, the entire site is automatically regenerated. Typically, when you load a page on a website, there's a lot happening in the backend to display what you ultimately see on the page. Gatsby reloads all the dynamic content when updated, so when visitors hit your site, it no longer needs to do any heavy lifting. 
-          </p>
+          <h1 className="font-serif mb-5 inline text-white">Focus on the laughs, not the tech</h1>
+          <p className="font-sans my-5 text-gray-400">Even the most popular website solutions can be cumbersome. Wordpress has a learning curve. Squarespace results can be underwhelming. Let us custom design and develop a website for your precise comedy needs.</p>
           
-          <p className="font-sans font-bold">
-            <Link to={'/contact'} className="text-red-500">Reach out to me</Link>, to inquire if Gatsby is right for your website!
-          </p>
+          <p className="font-sans text-gray-400 my-5">We build websites for comics for an affordable price.</p>
+          <p className="font-sans text-gray-300"><strong>Standard sites start at $250.</strong></p>
           </div>
         </div>
         <div className="hidden md:block flex relative items-center justify-center">
-          <div className="bg-red-500 block w-64 h-64 overflow-hidden">&nbsp;</div>
-          <div className="bg-red-500 block w-64 h-64 overflow-hidden absolute -mt-60 -ml-4 flex justify-center items-end">
-            <img src="https://res.cloudinary.com/meshed-nyc/image/upload/v1638307749/bagel-square_yqsxz4.jpg" />
+          
+        </div>
+      </div>
+
+      </div>
+      <div className="bg-black">
+      <div className="container text-center px-10 mx-auto">
+        <h4 className="text-center text-gray-500 font-sans block font-bold">WEBSITE FEATURES</h4>
+        <h1 className="text-center text-white font-serif block my-5">The Standard Package for $250</h1>
+        <p className="text-center text-gray-500 font-sans mb-10">I will develop your website with love + care. Here are some of the features you get.</p>
+      </div>
+        <div className="container mx-auto grid grid-cols-3 px-10 gap-1">
+
+          <div className="bg-gray-900 p-6">
+            <div className="bg-blue-600 h-10 w-10 rounded-full mb-5">&nbsp;</div>
+            <strong className="text-white mb-2 block">CUSTOM DESIGN</strong>
+            <p className="text-gray-500">I will help develop a website design that fits your comedic style.</p>
+          </div>
+          <div className="bg-gray-900 p-6">
+            <div className="bg-blue-600 h-10 w-10 rounded-full mb-5">&nbsp;</div>
+            <strong className="text-white mb-2 block">SHOWS &amp; EVENTS</strong>
+            <p className="text-gray-500">Let your fans know where to watch you stand up. Easily list shows through a simplified backend.</p>
+          </div>
+          <div className="bg-gray-900 p-6">
+            <div className="bg-blue-600 h-10 w-10 rounded-full mb-5">&nbsp;</div>
+            <strong className="text-white mb-2 block">PODCASTS</strong>
+            <p className="text-gray-500">Create a home for your podcasts. List episodes, and link to different streaming platforms.</p>
+          </div>
+          <div className="bg-gray-900 p-6">
+            <div className="bg-blue-600 h-10 w-10 rounded-full mb-5">&nbsp;</div>
+            <strong className="text-white block mb-2">SOCIAL MEDIA</strong>
+            <p className="text-gray-500">Promote your social media accounts, and amass a larger audience.</p>
+          </div>
+          <div className="bg-gray-900 p-6">
+            <div className="bg-blue-600 h-10 w-10 rounded-full mb-5">&nbsp;</div>
+            <strong className="text-white mb-2 block">SEO</strong>
+            <p className="text-gray-500">Get found on search engines with ease.</p>
+          </div>
+          <div className="bg-gray-900 p-6">
+            <div className="bg-blue-600 h-10 w-10 rounded-full mb-5">&nbsp;</div>
+            <strong className="text-white mb-2 block">MAILING LISTS</strong>
+            <p className="text-gray-500">Grow your mailing list and reach more subscribers</p>
           </div>
         </div>
-        
-
       </div>
       <div className="hidden container bg-black mx-auto text-white text-center py-20 mb-32 px-10">
         <h1 className="text-white font-serif mb-20">What kind of websites are a good fit?</h1>
@@ -93,38 +122,50 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
         </div>
       </div>
 
-      <div className="container mx-auto p-10 mb-10 grid md:grid-cols-3" id="about">
-      <div className="hidden md:block relative mb-32">
-        <div className="bg-red-500 block  w-64 h-64 overflow-hidden  flex justify-center items-end">&nbsp;</div>
-          <div className="bg-red-500 block  w-64 h-64 absolute -mt-60  ml-4 overflow-hidden flex justify-center items-end">
-            <img src="https://res.cloudinary.com/meshed-nyc/image/upload/v1638307749/dave_t4vbsk.jpg"/>
-          </div>
+      <div className="container mx-auto p-10 mb-10 grid md:grid-cols-3 mt-20" id="about">
+      <div className="hidden md:block relative mb-32 md:pr-10">
+            <img src="https://res.cloudinary.com/meshed-nyc/image/upload/v1638307749/dave_t4vbsk.jpg" className="rounded-full max-w-full"/>
+          
       </div>
       <div className="text-black md:col-span-2 mb-5">
-          <h1 className="mb-5 font-serif">About me 🙋🏻</h1>
-          <p className="my-5">I graduated from Stony Brook University in 2006, and landed my first web development job at a prestigious auction house, where I was given the opportunity to hone my skills and expand my craft as a developer.</p>
-          <p className="mb-5">The experience however was also a tumultuous one for me, a young adult at the time, perhaps unprepared for the demands of a corporate environment. After being part of massive layoffs in 2009, I had felt like a failure. I blamed myself, and couldn’t shake this belief that I hadn’t done enough.</p>
-          <p className="mb-5">It took time to see this event as something else: an opportunity to contemplate my own values, to focus on individual wellness, and to foster my own creativity.</p>
-          <p className="mb-5">I began to develop freelance, taking on contract work from mostly solo entrepreneurs. I started developing ideas of my own, quickly becoming the “idea guy” in my social circle. The lesson was that there was another way!</p>
-          <p className="mb-5">I became passionate about helping others who set out to do their own thing. I’ve built websites for local artists, grass roots organizations, and solo entrepreneurs. I want to use my technical expertise to help people showcase what they are offering and help them reach their audience.</p>
-          <p>Contact me to see if I can help you tell <strong className="italic">your story</strong>!</p>
+          <h1 className="mb-5 font-serif text-white">About me</h1>
+          <p className="my-5 text-gray-400">Hello, I'm Dave!</p>
+          <p className="my-5 text-gray-400">I'm a Queens based website developer with over 15 years experience.</p>
+          <p className="my-5 text-gray-400">My passion has always been helping self-starters pursue their goals and dreams. I have always admired those who venture off on their own to create the life they want.</p>
+          <p className="my-5 text-gray-400">With my knowledge and experience in web development, I hope to assist you in furthering your comedy career.</p>
+          <button className="rounded-full bg-blue-700 text-white px-8 py-3">Contact me</button>
         </div>
-        <div className="block md:hidden pt-10 relative mb-32 flex justify-center items-center">
-       
-          
-            <img src="https://res.cloudinary.com/meshed-nyc/image/upload/v1638307749/dave_t4vbsk.jpg" className="w-full"/>
-         
-      </div>
+        
       </div>
 
 
-      <div className="bg-white  pb-20">
+      <div className="bg-black  pb-20">
       <div className="container mx-auto p-6 md:p-10 ">
-        <div className="text-center">
-          <h1 className="font-serif mb-5 ">Ready to build something cool?</h1>
-          <h3 className="font-serif mt-5 mb-10">Reach out to me to see what I can do for you!</h3>
-          <Link to="/contact" className="bg-black py-5 px-10 text-white font-sans">Contact me</Link>
+        <div className="text-center mb-10">
+          <h1 className="font-serif mb-5 text-white">Ready to build something cool?</h1>
+          <p className="text-center text-gray-400 font-sans">Fill out this form to get in contact with me</p>
+          
         </div>
+        <div className="text-left md:w-1/2 mx-auto">
+          <label className="block text-gray-300 font-bold uppercase text-sm">Email Address</label>
+          <input type="email" name="email" className="p-3 bg-transparent border-b-2 border-gray-700 mb-5 w-full block" placeholder="you@lol.com"/>
+          
+          <label className="block text-gray-300 font-bold uppercase text-sm">Full Name</label>
+          <input type="text" name="name" className="p-3 mb-5 bg-transparent border-b-2 border-gray-700 w-full block" placeholder=""/>
+          
+          <label className="block text-gray-300 font-bold uppercase text-sm">CURRENT WEBSITE URL (IF APPLICABLE)</label>
+          <input type="text" name="current_website" className="p-3 mb-5 bg-transparent border-b-2 border-gray-700 w-full block" placeholder="https://..."/>
+          
+          <label className="block text-gray-300 font-bold uppercase text-sm">Social Media Accounts</label>
+          <small className="text-gray-400">This will help me understand your style better.</small>
+          <textarea name="social_media" className="p-3 bg-transparent border-b-2 mb-5 border-gray-700 w-full block" rows="3" placeholder="List handles or links to your various social media accounts.."></textarea>
+          
+          <label className="block text-gray-300 font-bold uppercase text-sm">Additional info</label>
+          <small className="text-gray-400">Is there anything you specifically need for your website?</small>
+          <textarea name="social_media" className="p-3 bg-transparent border-b-2 border-gray-700 w-full block mb-5" rows="3" placeholder=""></textarea>
+          <button className="rounded-full bg-blue-600 px-8 py-3 text-white block md:inline-block">Submit</button>
+          </div>
+      </div>
       </div>
       </div>
     </Layout>

@@ -16,7 +16,7 @@ const Header = ({ setOpenModal, dark }) => {
     <header className="p-0 absolute w-full z-10">
       <div className="flex py-10 container mx-auto text-white items-center justify-between md:block hidden">
        <ul>
-       	<li className="float-left"><Link to={'/'} className={`${textColor} font-sans font-bold uppercase`}>DAVE LUKE</Link></li>
+       	<li className="float-left"><Link to={'/'} className={`${textColor} font-sans font-bold uppercase`}>FUNNYSITES.NYC</Link></li>
        </ul>
        
        <ul>
