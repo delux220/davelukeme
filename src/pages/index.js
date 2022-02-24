@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { ChevronDownIcon } from '@heroicons/react/solid'
+import { ChevronDownIcon, ColorSwatchIcon, CalendarIcon, MicrophoneIcon, MailIcon, UserIcon, SearchIcon } from '@heroicons/react/solid'
+
 import Layout from "~/components/layout"
 import SEO from "~/components/seo"
 import CategoryList from "~/components/category-list"
@@ -16,12 +17,12 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
       <div className="bg-cover bg-center relative" style={{backgroundImage:"url('https://res.cloudinary.com/meshed-nyc/image/upload/v1645540253/matthias-wagner-QrqeusbpFMM-unsplash_szsxzv.jpg')"}}>
       <div className="container mx-auto flex h-screen items-center p-6 md:p-10">
         <div className="text-center w-full">
-
-          <h1 className="font-serif mb-3 text-white">Showcase your comedy talents</h1>
+          <h3 className="font-sans text-white mb-3 font-bold">ATTN: NYC COMICS!</h3>
+          <h1 className="font-serif mb-4 text-white">Showcase your comedy talents</h1>
           
-          <h3 className="font-serif text-white mb-5">with a sleek + easy to maintain website</h3>
+          <h3 className="font-serif text-white mb-5">with a beautiful, custom designed website</h3>
           
-          <button className="px-8 py-3 bg-blue-600 text-white font-sans rounded-full">Get Started for $250</button>
+          <button className="px-8 py-3 bg-black text-white font-sans rounded-full">Get Started</button>
         </div>
         <div className="text-center absolute w-full" style={{bottom:0, left:0}}>
         <ChevronDownIcon className="mx-auto animate-bounce h-10 w-10 block text-white opacity-50"/>
@@ -30,19 +31,15 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
       </div>
 
       <div className="bg-black">
-      <div className="container mx-auto grid md:grid-cols-3 md:px-10 md:mb-20 py-32">
-      <div className="block md:hidden flex relative items-center justify-center px-10 mb-10">
-          
-            <img src="https://res.cloudinary.com/meshed-nyc/image/upload/v1638307749/bagel-square_yqsxz4.jpg" className="w-full" />
-        
-        </div>
-      <div className="md:col-span-2 flex items-center md:mb-0 mb-10">
+      <div className="container mx-auto px-10 md:mb-20 py-32">
+      <div className=" flex items-center md:mb-0 mb-10">
           <div className="">
           <h1 className="font-serif mb-5 inline text-white">Focus on the laughs, not the tech</h1>
-          <p className="font-sans my-5 text-gray-400">Even the most popular website solutions can be cumbersome. Wordpress has a learning curve. Squarespace results can be underwhelming. Let us custom design and develop a website for your precise comedy needs.</p>
+          <p className="font-sans my-5 text-gray-400">Even the most popular website solutions can be cumbersome. Wordpress can still have a learning curve. Squarespace results can be underwhelming. Let me custom design and develop a website for your precise needs.</p>
           
-          <p className="font-sans text-gray-400 my-5">We build websites for comics for an affordable price.</p>
-          <p className="font-sans text-gray-300"><strong>Standard sites start at $250.</strong></p>
+          <p className="font-sans text-gray-400 mt-5 mb-10">I build custom-coded websites for comics at an affordable rate.</p>
+          
+          <a href="/#contact" className="px-8 py-3 bg-blue-600 text-white rounded-full block md:inline-block text-center">Reach out</a>
           </div>
         </div>
         <div className="hidden md:block flex relative items-center justify-center">
@@ -55,39 +52,52 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
       <div className="container text-center px-10 mx-auto">
         <h4 className="text-center text-gray-500 font-sans block font-bold">WEBSITE FEATURES</h4>
         <h1 className="text-center text-white font-serif block my-5">The Standard Package for $250</h1>
-        <p className="text-center text-gray-500 font-sans mb-10">I will develop your website with love + care. Here are some of the features you get.</p>
+        <p className="text-center text-gray-500 font-sans mb-5">Here are some of the features you get. Standard package does <span className="italic">not</span> include an online store.</p>
+        <p className="text-center text-gray-500 font-sans mb-10">Domain purchases and hosting costs, if applicable, are also not included.</p>
       </div>
-        <div className="container mx-auto grid grid-cols-3 px-10 gap-1">
+        <div className="container mx-auto grid md:grid-cols-3 px-10 gap-1">
 
           <div className="bg-gray-900 p-6">
-            <div className="bg-blue-600 h-10 w-10 rounded-full mb-5">&nbsp;</div>
-            <strong className="text-white mb-2 block">CUSTOM DESIGN</strong>
-            <p className="text-gray-500">I will help develop a website design that fits your comedic style.</p>
+            <div className="bg-blue-600 h-10 w-10 rounded-full mb-5 flex justify-center items-center mx-auto md:mx-0">
+              <ColorSwatchIcon className="fa-regular fa-palette text-white w-5 h-5"/>
+            </div>
+            <strong className="text-white mb-2 block text-center md:text-left">CUSTOM DESIGN</strong>
+            <p className="text-gray-500">I will help develop a website design that is clean, aesthetically appealing, and fits your comedic style.</p>
           </div>
           <div className="bg-gray-900 p-6">
-            <div className="bg-blue-600 h-10 w-10 rounded-full mb-5">&nbsp;</div>
-            <strong className="text-white mb-2 block">SHOWS &amp; EVENTS</strong>
-            <p className="text-gray-500">Let your fans know where to watch you stand up. Easily list shows through a simplified backend.</p>
+            <div className="bg-blue-600 h-10 w-10 rounded-full mb-5 flex justify-center items-center mx-auto md:mx-0">
+              <CalendarIcon className="fa-regular fa-palette text-white w-5 h-5"/>
+            </div>
+            <strong className="text-white mb-2 block text-center md:text-left">SHOWS &amp; EVENTS</strong>
+            <p className="text-gray-500">Let your fans know when and where they can watch you perform. Easily list shows through a simplified backend.</p>
           </div>
           <div className="bg-gray-900 p-6">
-            <div className="bg-blue-600 h-10 w-10 rounded-full mb-5">&nbsp;</div>
-            <strong className="text-white mb-2 block">PODCASTS</strong>
+            <div className="bg-blue-600 h-10 w-10 rounded-full mb-5 flex justify-center items-center mx-auto md:mx-0">
+              <MicrophoneIcon className="fa-regular fa-palette text-white w-5 h-5"/>
+            </div>
+            <strong className="text-white mb-2 block text-center md:text-left">PODCASTS</strong>
             <p className="text-gray-500">Create a home for your podcasts. List episodes, and link to different streaming platforms.</p>
           </div>
           <div className="bg-gray-900 p-6">
-            <div className="bg-blue-600 h-10 w-10 rounded-full mb-5">&nbsp;</div>
-            <strong className="text-white block mb-2">SOCIAL MEDIA</strong>
-            <p className="text-gray-500">Promote your social media accounts, and amass a larger audience.</p>
+            <div className="bg-blue-600 h-10 w-10 rounded-full mb-5 flex justify-center items-center mx-auto md:mx-0">
+              <UserIcon className="fa-regular fa-palette text-white w-5 h-5"/>
+            </div>
+            <strong className="text-white block mb-2 text-center md:text-left">SOCIAL MEDIA</strong>
+            <p className="text-gray-500">Promote your social media accounts, so your fans know where to follow you. Prominently share your Patreon, and gain supporters.</p>
           </div>
           <div className="bg-gray-900 p-6">
-            <div className="bg-blue-600 h-10 w-10 rounded-full mb-5">&nbsp;</div>
-            <strong className="text-white mb-2 block">SEO</strong>
-            <p className="text-gray-500">Get found on search engines with ease.</p>
+            <div className="bg-blue-600 h-10 w-10 rounded-full mb-5 flex justify-center items-center mx-auto md:mx-0">
+              <SearchIcon className="fa-regular fa-palette text-white w-5 h-5"/>
+            </div>
+            <strong className="text-white mb-2 block text-center md:text-left">SEO</strong>
+            <p className="text-gray-500">Make sure you're found when being Googled. I will do the legwork to make sure your site shows up in search engines, and present nicely on social media.</p>
           </div>
           <div className="bg-gray-900 p-6">
-            <div className="bg-blue-600 h-10 w-10 rounded-full mb-5">&nbsp;</div>
-            <strong className="text-white mb-2 block">MAILING LISTS</strong>
-            <p className="text-gray-500">Grow your mailing list and reach more subscribers</p>
+            <div className="bg-blue-600 h-10 w-10 rounded-full mb-5 flex justify-center items-center mx-auto md:mx-0">
+              <MailIcon className="fa-regular fa-palette text-white w-5 h-5"/>
+            </div>
+            <strong className="text-white mb-2 block text-center md:text-left">MAILING LISTS</strong>
+            <p className="text-gray-500">Mailing lists can be future free marketing. Grow your mailing list and reach more subscribers.</p>
           </div>
         </div>
       </div>
@@ -128,27 +138,27 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
           
       </div>
       <div className="text-black md:col-span-2 mb-5">
-          <h1 className="mb-5 font-serif text-white">About me</h1>
-          <p className="my-5 text-gray-400">Hello, I'm Dave!</p>
-          <p className="my-5 text-gray-400">I'm a Queens based website developer with over 15 years experience.</p>
-          <p className="my-5 text-gray-400">My passion has always been helping self-starters pursue their goals and dreams. I have always admired those who venture off on their own to create the life they want.</p>
-          <p className="my-5 text-gray-400">With my knowledge and experience in web development, I hope to assist you in furthering your comedy career.</p>
-          <button className="rounded-full bg-blue-700 text-white px-8 py-3">Contact me</button>
+          <h1 className="mb-5 font-serif text-white">Pleased to meet you. I'm Dave!</h1>
+          <p className="my-5 text-gray-400">Thanks for your interest! Here is a little information about myself..</p>
+          <p className="my-5 text-gray-400">I'm a Queens based website developer with over 15 years experience in various web technologies. </p>
+          <p className="my-5 text-gray-400">My passion is to help self-starters pursue their goals and dreams. I have always admired those who venture off on their own to make things happen, whether they be entrepreneurs, artists, or content creators. With my knowledge and experience in tech, I hope to assist you further your comedy career.</p>
+          <p className="my-5 text-gray-400">I also have a 13 year old puggle named Bagel who loves walks, hugs, and rummaging through the garbage.</p>
+          <a href="#contact" className="rounded-full bg-blue-700 text-white px-8 py-3 text-center block md:inline-block">Contact me</a>
         </div>
         
       </div>
 
 
-      <div className="bg-black  pb-20">
-      <div className="container mx-auto p-6 md:p-10 ">
+      <div className="bg-black pb-20" id="contact">
+      <div className="container mx-auto px-10">
         <div className="text-center mb-10">
           <h1 className="font-serif mb-5 text-white">Ready to build something cool?</h1>
-          <p className="text-center text-gray-400 font-sans">Fill out this form to get in contact with me</p>
+          <p className="text-center text-gray-400 font-sans">Reach out to me by completing this form. It will help me understand your tech needs.</p>
           
         </div>
         <div className="text-left md:w-1/2 mx-auto">
           <label className="block text-gray-300 font-bold uppercase text-sm">Email Address</label>
-          <input type="email" name="email" className="p-3 bg-transparent border-b-2 border-gray-700 mb-5 w-full block" placeholder="you@lol.com"/>
+          <input type="email" name="email" className="p-3 bg-transparent border-b-2 border-gray-700 mb-5 w-full block" placeholder="you@email.com"/>
           
           <label className="block text-gray-300 font-bold uppercase text-sm">Full Name</label>
           <input type="text" name="name" className="p-3 mb-5 bg-transparent border-b-2 border-gray-700 w-full block" placeholder=""/>
@@ -163,7 +173,7 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
           <label className="block text-gray-300 font-bold uppercase text-sm">Additional info</label>
           <small className="text-gray-400">Is there anything you specifically need for your website?</small>
           <textarea name="social_media" className="p-3 bg-transparent border-b-2 border-gray-700 w-full block mb-5" rows="3" placeholder=""></textarea>
-          <button className="rounded-full bg-blue-600 px-8 py-3 text-white block md:inline-block">Submit</button>
+          <button className="rounded-full bg-blue-600 px-8 py-3 text-white block text-center w-full md:inline-block md:w-auto" type="submit">Submit</button>
           </div>
       </div>
       </div>

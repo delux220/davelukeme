@@ -19,7 +19,7 @@ const Layout = ({ children , dark}) => {
   const [openModal, setOpenModal] = useState(false)
 
   return (
-    <div className="">
+    <div className="bg-black">
       <Header
         setOpenModal={setOpenModal}
         siteName={data.strapiGlobal.siteName || `Strapi`}

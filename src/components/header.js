@@ -12,6 +12,8 @@ const Header = ({ setOpenModal, dark }) => {
   const bgColor = dark?'bg-white':'bg-black';
   const otherBgColor = dark?'bg-black':'bg-white';
 
+  const [hover, setHover] = React.useState(false);
+
   return (
     <header className="p-0 absolute w-full z-10">
       <div className="flex py-10 container mx-auto text-white items-center justify-between md:block hidden">
@@ -21,13 +23,11 @@ const Header = ({ setOpenModal, dark }) => {
        
        <ul>
           
-       	<li className="float-right ml-10"><Link to={'/contact'}  className={`${otherColor} ${otherBgColor} font-sans font-normal uppercase px-5 py-3 rounded-full`}>Contact</Link></li>
-        <li className="float-right ml-10"><Link to={'/tech'}  className={`${textColor} font-sans font-normal uppercase`}>Tech</Link></li>
-
-        <li className="float-right ml-10"><Link to={'/photography'}  className={`${textColor} font-sans font-normal uppercase`}>Photography</Link></li>
+       	<li className="float-right ml-10"><a href="/#contact"  className={`${otherColor} ${otherBgColor} font-sans font-normal uppercase px-5 py-3 rounded-full`}>Contact</a></li>
+            
         <li className="float-right ml-10"><Link to={'/#about'} className={`${textColor} font-sans font-normal uppercase`}>About</Link></li>
-        <li className="float-right ml-10"><Link to={'/projects'} className={`${textColor} font-sans font-normal uppercase`}>Projects</Link></li>
-       
+        <li className="float-right ml-10"><a onClick={(e) => {e.preventDefault()}} to={'#'} className={`${textColor} font-sans font-normal uppercase`} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>{hover?'COMING SOON':'PROJECTS'}</a></li>
+        
        </ul>
       </div>
       <div className="fixed mb-10 z-20 flex py-0 container mx-auto justify-between md:hidden">
@@ -41,18 +41,11 @@ const Header = ({ setOpenModal, dark }) => {
                     <span aria-hidden="true" className={"block absolute  h-0.5 w-5 bg-white transform  transition duration-500 ease-in-out "+(open?"-rotate-45  ":"translate-y-1.5")}></span>
                 </div>
             </button>
-            {<div className={"absolute w-screen z-20 bg-white p-10 transform transition-all duration-500 ease-out "+(open?"scale-100":"scale-0")} style={{right: 0}}>
+            {<div className={"absolute w-screen z-20 bg-transparent p-10 transform transition-all duration-500 ease-out "+(open?"scale-100":"scale-0")} style={{right: 0}}>
               <ul>
-        <li ><Link to={'/'} className={`text-black font-sans font-normal uppercase`}>Home</Link></li>
-        <li ><Link to={'/#about'} className={`text-black font-sans font-normal uppercase`}>About</Link></li>
-        <li ><Link to={'/projects'} className={`text-black font-sans font-normal uppercase`}>Projects</Link></li>
-      
-
-        
-        <li ><Link to={'/tech'}  className={`text-black font-sans font-normal uppercase`}>Tech</Link></li>
-
-        <li ><Link to={'/photography'}  className={`text-black font-sans font-normal uppercase`}>Photography</Link></li>
-        <li ><Link to={'/contact'}  className={`text-black font-sans font-normal uppercase`}>Contact</Link></li>
+       
+        <li ><Link to={'/#about'} className={`text-white font-sans font-normal uppercase`} onClick={() => setOpen(!open)}>About</Link></li>
+        <li ><Link to={'/#contact'}  className={`text-white font-sans font-normal uppercase`} onClick={() => setOpen(!open)}>Contact</Link></li>
        </ul>
             </div>}
         </div>
