@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { ChevronDownIcon, ColorSwatchIcon, CalendarIcon, MicrophoneIcon, MailIcon, UserIcon, SearchIcon } from '@heroicons/react/solid'
+import { ChevronDownIcon, ColorSwatchIcon, CalendarIcon, MicrophoneIcon, MailIcon, PencilIcon, UserIcon, SearchIcon, InformationCircleIcon, LightningBoltIcon } from '@heroicons/react/solid'
 
 import Layout from "~/components/layout"
 import SEO from "~/components/seo"
@@ -9,7 +9,7 @@ import PageHeading from "~/components/styled/page-heading"
 
 const IndexPage = ({ data: { allStrapiCategory } }) => {
   const categories = allStrapiCategory.edges
-  const seo = { title: "Dave Luke, NYC based developer" };
+  const seo = { title: "Funny Sites - Custom Sites for NYC Comics and Podcast Hosts" };
 
   const [email, setEmail] = React.useState('');
 
@@ -49,7 +49,7 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
       </div>
 
       <div className="bg-black">
-      <div className="container mx-auto px-10 md:mb-20 py-32">
+      <div className="container mx-auto px-10 md:mb-10 py-20">
       <div className=" flex items-center md:mb-0 mb-10">
           <div className="">
           <h1 className="font-serif mb-5 inline text-white">Focus on the laughs, not the tech</h1>
@@ -108,7 +108,7 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
               <SearchIcon className="fa-regular fa-palette text-white w-5 h-5"/>
             </div>
             <strong className="text-white mb-2 block text-center md:text-left">SEO</strong>
-            <p className="text-gray-500">Make sure you're found when being Googled. I will do the legwork to make sure your site shows up in search engines, and present nicely on social media.</p>
+            <p className="text-gray-500">Make sure you're found when being Googled. I will do the legwork to make sure your site shows up in search engines.</p>
           </div>
           <div className="bg-gray-900 p-6">
             <div className="bg-blue-600 h-10 w-10 rounded-full mb-5 flex justify-center items-center mx-auto md:mx-0">
@@ -116,6 +116,27 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
             </div>
             <strong className="text-white mb-2 block text-center md:text-left">MAILING LISTS</strong>
             <p className="text-gray-500">Mailing lists can be future free marketing. Grow your mailing list and reach more subscribers.</p>
+          </div>
+          <div className="bg-gray-900 p-6">
+            <div className="bg-blue-600 h-10 w-10 rounded-full mb-5 flex justify-center items-center mx-auto md:mx-0">
+              <PencilIcon className="fa-regular fa-palette text-white w-5 h-5"/>
+            </div>
+            <strong className="text-white mb-2 block text-center md:text-left">CONTACT FORM</strong>
+            <p className="text-gray-500">Receive inquiries from your website visitors. Prevent spam by having a protected contact form.</p>
+          </div>
+          <div className="bg-gray-900 p-6">
+            <div className="bg-blue-600 h-10 w-10 rounded-full mb-5 flex justify-center items-center mx-auto md:mx-0">
+              <InformationCircleIcon className="fa-regular fa-palette text-white w-5 h-5"/>
+            </div>
+            <strong className="text-white mb-2 block text-center md:text-left">CONTENT PAGES</strong>
+            <p className="text-gray-500">Get up to 3 additional content-based pages. Include an About page to share an engaging bio with your audience.</p>
+          </div>
+          <div className="bg-gray-900 p-6">
+            <div className="bg-blue-600 h-10 w-10 rounded-full mb-5 flex justify-center items-center mx-auto md:mx-0">
+              <LightningBoltIcon className="fa-regular fa-palette text-white w-5 h-5"/>
+            </div>
+            <strong className="text-white mb-2 block text-center md:text-left">BLAZING FAST</strong>
+            <p className="text-gray-500">Sites are custom coded using technology specializing in fast page loads and seamless navigation.</p>
           </div>
         </div>
       </div>
