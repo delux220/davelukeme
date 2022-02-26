@@ -171,7 +171,7 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
           
         </div>
         <div className="text-left md:w-1/2 mx-auto">
-        <form action="#" netlify-honeypot="bot-field" name="contact" netlify method="POST" id="contact-form" onSubmit={handleSubmit}>
+        <form action="#" netlify-honeypot="bot-field" data-netlify="true" name="contact" netlify method="POST" id="contact-form" >
           <input type="hidden" name="bot-field" />
            <input type="hidden" name="form-name" value="contact" />
           <label className="block text-gray-300 font-bold uppercase text-sm">Email Address</label>
