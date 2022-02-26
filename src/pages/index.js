@@ -9,7 +9,21 @@ import PageHeading from "~/components/styled/page-heading"
 
 const IndexPage = ({ data: { allStrapiCategory } }) => {
   const categories = allStrapiCategory.edges
-  const seo = { title: "Dave Luke, NYC based developer" }
+  const seo = { title: "Dave Luke, NYC based developer" };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let form = document.getElementById('contact-form');
+    let formData = new FormData(form);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    }).then(() => console.log("Form successfully submitted"))
+      .catch((error) => alert(error));
+  };
+
+
   return (
     <Layout className="bg-black">
     <div className="bg-black">
@@ -157,6 +171,7 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
           
         </div>
         <div className="text-left md:w-1/2 mx-auto">
+        <form name="contact" netlify method="POST" id="contact-form" onSubmit={handleSubmit}>
           <label className="block text-gray-300 font-bold uppercase text-sm">Email Address</label>
           <input type="email" name="email" className="p-3 bg-transparent border-b-2 border-gray-700 mb-5 w-full block" placeholder="you@email.com"/>
           
@@ -174,7 +189,8 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
           <small className="text-gray-400">Is there anything you specifically need for your website?</small>
           <textarea name="social_media" className="p-3 bg-transparent border-b-2 border-gray-700 w-full block mb-5" rows="3" placeholder=""></textarea>
           <button className="rounded-full bg-blue-600 px-8 py-3 text-white block text-center w-full md:inline-block md:w-auto" type="submit">Submit</button>
-          </div>
+         </form>
+         </div>
       </div>
       </div>
       </div>
