@@ -11,16 +11,20 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
   const categories = allStrapiCategory.edges
   const seo = { title: "Dave Luke, NYC based developer" };
 
+  const [email, setEmail] = React.useState('');
+
+  const [name, setName] = React.useState('');
+
+  const [error, setError] = React.useState('');
+
   const handleSubmit = (e) => {
-    e.preventDefault();
-    let form = document.getElementById('contact-form');
-    let formData = new FormData(form);
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    }).then(() => console.log("Form successfully submitted"))
-      .catch((error) => alert(error));
+      setError('');
+      if (email.trim().length == 0 || name.trim().length == 0) {
+        setError('Email address and your name are required fields.');
+        e.preventDefault();
+        return false;
+      }
+      return true;
   };
 
 
@@ -155,7 +159,7 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
           <h1 className="mb-5 font-serif text-white">Pleased to meet you. I'm Dave!</h1>
           <p className="my-5 text-gray-400">Thanks for your interest! Here is a little information about myself..</p>
           <p className="my-5 text-gray-400">I'm a Queens based website developer with over 15 years experience in various web technologies. </p>
-          <p className="my-5 text-gray-400">My passion is to help self-starters pursue their goals and dreams. I have always admired those who venture off on their own to make things happen, whether they be entrepreneurs, artists, or content creators. With my knowledge and experience in tech, I hope to assist you further your comedy career.</p>
+          <p className="my-5 text-gray-400">My passion is to help self-starters pursue their dreams. I have always admired those who venture off on their own to make things happen, whether they be entrepreneurs, artists, or content creators. With my knowledge and experience in tech, I hope to assist you further your comedy career.</p>
           <p className="my-5 text-gray-400">I also have a 13 year old puggle named Bagel who loves walks, hugs, and rummaging through the garbage.</p>
           <a href="#contact" className="rounded-full bg-blue-700 text-white px-8 py-3 text-center block md:inline-block">Contact me</a>
         </div>
@@ -171,25 +175,30 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
           
         </div>
         <div className="text-left md:w-1/2 mx-auto">
-        <form action="#" netlify-honeypot="bot-field" data-netlify="true" name="contact" netlify method="POST" id="contact-form" >
+        <form action="#" netlify-honeypot="bot-field" data-netlify="true" name="contact" netlify method="POST" id="contact-form" onSubmit={handleSubmit}>
           <input type="hidden" name="bot-field" />
            <input type="hidden" name="form-name" value="contact" />
-          <label className="block text-gray-300 font-bold uppercase text-sm">Email Address</label>
-          <input type="email" name="email" className="p-3 bg-transparent border-b-2 border-gray-700 mb-5 w-full block" placeholder="you@email.com"/>
+          <label className="block text-gray-300 font-bold uppercase text-sm">Email Address *</label>
+          <input type="email" name="email" className="p-3 text-white bg-transparent border-b-2 border-gray-700 mb-5 w-full block" placeholder="you@email.com" value={email}/>
           
-          <label className="block text-gray-300 font-bold uppercase text-sm">Full Name</label>
-          <input type="text" name="name" className="p-3 mb-5 bg-transparent border-b-2 border-gray-700 w-full block" placeholder=""/>
+          <label className="block text-gray-300 font-bold uppercase text-sm">Full Name *</label>
+          <input type="text" name="name" className="p-3 text-white mb-5 bg-transparent border-b-2 border-gray-700 w-full block" placeholder="" value={name}/>
           
           <label className="block text-gray-300 font-bold uppercase text-sm">CURRENT WEBSITE URL (IF APPLICABLE)</label>
-          <input type="text" name="current_website" className="p-3 mb-5 bg-transparent border-b-2 border-gray-700 w-full block" placeholder="https://..."/>
+          <input type="text" name="current_website" className="p-3 text-white mb-5 bg-transparent border-b-2 border-gray-700 w-full block" placeholder="https://..."/>
           
           <label className="block text-gray-300 font-bold uppercase text-sm">Social Media Accounts</label>
           <small className="text-gray-400">This will help me understand your style better.</small>
-          <textarea name="social_media" className="p-3 bg-transparent border-b-2 mb-5 border-gray-700 w-full block" rows="3" placeholder="List handles or links to your various social media accounts.."></textarea>
+          <textarea name="social_media" className="p-3 text-white bg-transparent border-b-2 mb-5 border-gray-700 w-full block" rows="3" placeholder="List handles or links to your various social media accounts.."></textarea>
           
           <label className="block text-gray-300 font-bold uppercase text-sm">Additional info</label>
           <small className="text-gray-400">Is there anything you specifically need for your website?</small>
-          <textarea name="additional_info" className="p-3 bg-transparent border-b-2 border-gray-700 w-full block mb-5" rows="3" placeholder=""></textarea>
+          <textarea name="additional_info" className="p-3 text-white bg-transparent border-b-2 border-gray-700 w-full block mb-5" rows="3" placeholder=""></textarea>
+          
+          {
+            error.length>0&&<div className="text-red-400 mb-5">{error}</div>
+          }
+
           <button className="rounded-full bg-blue-600 px-8 py-3 text-white block text-center w-full md:inline-block md:w-auto" type="submit">Submit</button>
          </form>
          </div>
