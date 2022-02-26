@@ -187,7 +187,7 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
           
           <label className="block text-gray-300 font-bold uppercase text-sm">Additional info</label>
           <small className="text-gray-400">Is there anything you specifically need for your website?</small>
-          <textarea name="social_media" className="p-3 bg-transparent border-b-2 border-gray-700 w-full block mb-5" rows="3" placeholder=""></textarea>
+          <textarea name="additional_info" className="p-3 bg-transparent border-b-2 border-gray-700 w-full block mb-5" rows="3" placeholder=""></textarea>
           <button className="rounded-full bg-blue-600 px-8 py-3 text-white block text-center w-full md:inline-block md:w-auto" type="submit">Submit</button>
          </form>
          </div>
