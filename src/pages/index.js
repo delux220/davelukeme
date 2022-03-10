@@ -17,6 +17,8 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
 
   const [error, setError] = React.useState('');
 
+  const [accordion, setAccordion] = React.useState(0);
+
   const handleSubmit = (e) => {
       setError('');
       if (email.trim().length == 0 || name.trim().length == 0) {
@@ -27,20 +29,28 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
       return true;
   };
 
+  const cards = [
+    {title: 'Kickoff', description: 'Fill out the form below to reach out, and also provide an understanding of your technical + design needs.'},
+    {title: 'First Draft', description: 'Based on the information and requirements you provide, I will design and develop a first draft of your website.'},
+    {title: 'Feedback', description: 'Let me know what you think! Does the design complement your comedic style?'},
+    {title: 'Second Draft', description: 'Based on your feedback, I will implement the necessary changes.'},
+    {title: 'Content', description: 'At this point, you will need to provide the actual copy / content. Examples of this can include a biography for an "About" page or descriptions for your podcasts. I will also show you how to update your website and add shows.'},
+    {title: 'Launch', description: 'We are ready to go! I will make some final checks to make sure that your website looks good when shared to social media, that your SEO is working properly, and that there are no other loose ends.'},
+  ];
+
 
   return (
     <Layout className="bg-black">
     <div className="bg-black">
       <SEO seo={seo} />
       <div className="bg-cover bg-center relative" style={{backgroundImage:"url('https://res.cloudinary.com/meshed-nyc/image/upload/v1645540253/matthias-wagner-QrqeusbpFMM-unsplash_szsxzv.jpg')"}}>
-      <div className="container mx-auto flex h-screen items-center p-6 md:p-10">
+      <div className="container mx-auto flex h-screen justify-end items-end p-6 md:p-10">
         <div className="text-center w-full">
-          <h3 className="font-sans text-white mb-3 font-bold">ATTN: NYC COMICS!</h3>
-          <h1 className="font-serif mb-4 text-white">Showcase your comedy talents</h1>
+          <h1 className="font-slab mb-10 text-white animate-fadeIn transition ease-in-out scale-110 duration-300" style={{fontSize:'64px', lineHeight:'70px'}}>Having a website should be as painless as possible.</h1>
           
-          <h3 className="font-serif text-white mb-5">with a beautiful, custom designed website</h3>
+          <h4 className="font-sans text-white mb-10 uppercase" style={{letterSpacing: '2px'}}>Custom built websites for NYC based comedians</h4>
           
-          <button className="px-8 py-3 bg-black text-white font-sans rounded-full">Get Started</button>
+          <button className="px-8 py-3 mb-10 bg-black text-white font-sans rounded-full">Get Started</button>
         </div>
         <div className="text-center absolute w-full" style={{bottom:0, left:0}}>
         <ChevronDownIcon className="mx-auto animate-bounce h-10 w-10 block text-white opacity-50"/>
@@ -53,7 +63,7 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
       <div className=" flex items-center md:mb-0 mb-10">
           <div className="">
           <h1 className="font-serif mb-5 inline text-white">Focus on the laughs, not the tech</h1>
-          <p className="font-sans my-5 text-gray-400">Even the most popular website solutions can be cumbersome. Wordpress can still have a learning curve. Squarespace results can be underwhelming. Let me custom design and develop a website for your precise needs.</p>
+          <p className="font-sans my-5 text-gray-400">Even the more popular website solutions like Wordpress or Squarespace can be difficult to navigate / maintain, when you just want a cool looking website to showcase your comedy.</p>
           
           <p className="font-sans text-gray-400 mt-5 mb-10">I build custom-coded websites for comics at an affordable rate.</p>
           
@@ -140,34 +150,27 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
           </div>
         </div>
       </div>
-      <div className="hidden container bg-black mx-auto text-white text-center py-20 mb-32 px-10">
-        <h1 className="text-white font-serif mb-20">What kind of websites are a good fit?</h1>
-        <div className="grid md:grid-cols-4 gap-5 mb-20">
-          <div className="text-center">
-            <h3 className="font-serif text-white mb-5">Businesses</h3>
-            <p className="text-gray-500 text-left font-sans">Static sites are great for businesses of all sizes that need a website for informational purposes.</p>
-          </div>
-          <div className="text-center">
-            <h3 className="font-serif text-white mb-5">Personal Sites</h3>
-            <p className="text-gray-500 font-sans text-left">
-              Boost your brand with a beautifully designed website using sophisticated yet simple technology.
-            </p>
-          </div>
-          <div className="text-center">
-            <h3 className="font-serif text-white mb-5">Portfolios</h3>
-            <p className="text-gray-500 text-left">
-              Impress potential clients with a seamless experience that loads your showcase of works immediately
-            </p>
-          </div>
-          <div className="text-center">
-            <h3 className="font-serif text-white mb-5">Blogs</h3>
-            <p className="text-gray-500 text-left">
-              Static websites can connect to Wordpress and other blogging platforms easily!
-            </p>
-          </div>
+      <div className="container mx-auto text-white py-20 mb-32 px-10 grid md:grid-cols-2">
+        <div className="">
+          <h1 className="font-serif text-white mb-5">The Process</h1>
+          <p className="text-gray-500 mb-5">This is the general process to get your website designed, developed, and up and running. Each project is unique in its needs, but here is what to expect.</p>
+          <p className="text-gray-500 mb-5">Throughout the process, I may ask you for access to different accounts such as Mailchimp. This is necessary in order to connect various services.</p>
+          <p className="text-gray-500 mb-10">I'm always happy to answer any questions you may have along the way!</p>
+          <a href="#contact" className="px-10 py-3 bg-blue-600 text-white rounded-full hidden md:inline-block">Get Started</a>
         </div>
-        <div className="text-center ">
-          <Link to="/contact" className="border py-5 px-10 text-white font-sans">Contact me</Link>
+        <div class="grid  col-span-1 gap-2">
+            {
+              cards.map((card, i) => <div className="cursor-pointer bg-gray-900 p-5" onClick={() => setAccordion(i)} key={`accordion-${i}`}>
+                <strong className="text-white block uppercase">{(i+1)}. {card.title}</strong>
+                <div className="overflow-hidden transition-all duration-500 ease-in-out" style={{height: (i==accordion)?'100px':'0px'}}>
+                  {(i==accordion)&&<p className="text-gray-500">{card.description}</p>}
+                </div>
+              </div>)
+            }
+
+
+
+            
         </div>
       </div>
 
@@ -179,9 +182,9 @@ const IndexPage = ({ data: { allStrapiCategory } }) => {
       <div className="text-black md:col-span-2 mb-5">
           <h1 className="mb-5 font-serif text-white">Pleased to meet you. I'm Dave!</h1>
           <p className="my-5 text-gray-400">Thanks for your interest! Here is a little information about myself..</p>
-          <p className="my-5 text-gray-400">I'm a Queens based website developer with over 15 years experience in various web technologies. </p>
+          <p className="my-5 text-gray-400">I'm a Queens based website developer with over 15 years experience in web development. </p>
           <p className="my-5 text-gray-400">My passion is to help self-starters pursue their dreams. I have always admired those who venture off on their own to make things happen, whether they be entrepreneurs, artists, or content creators. With my knowledge and experience in tech, I hope to assist you further your comedy career.</p>
-          <p className="my-5 text-gray-400">I also have a 13 year old puggle named Bagel who loves walks, hugs, and rummaging through the garbage.</p>
+          <p className="my-5 text-gray-400">I have a 13 year old puggle named Bagel who loves walks, hugs, and rummaging through the garbage.</p>
           <a href="#contact" className="rounded-full bg-blue-700 text-white px-8 py-3 text-center block md:inline-block">Contact me</a>
         </div>
         
