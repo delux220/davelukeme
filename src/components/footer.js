@@ -8,7 +8,7 @@ const Footer = () => {
         
       </div>
       <div className="container text-center mx-auto pt-10 font-sans font-bold">
-        &copy; {new Date().getFullYear()} Funny Sites.
+        &copy; {new Date().getFullYear()} NYC COMEDY SITES.
       </div>
     </footer>
   )

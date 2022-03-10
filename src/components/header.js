@@ -43,9 +43,10 @@ const Header = ({ setOpenModal, dark }) => {
             </button>
             {<div className={"absolute w-screen z-20 bg-transparent p-10 transform transition-all duration-500 ease-out "+(open?"scale-100":"scale-0")} style={{right: 0}}>
               <ul>
-       
-        <li ><Link to={'/#about'} className={`text-white font-sans font-normal uppercase`} onClick={() => setOpen(!open)}>About</Link></li>
+       <li className="text-white font-sans font-normal uppercase">PROJECTS COMING SOON</li>
+        <li ><Link to={'/#about'} className={`text-white font-sans font-normal uppercase`} onClick={() => setOpen(!open)}>About me</Link></li>
         <li ><Link to={'/#contact'}  className={`text-white font-sans font-normal uppercase`} onClick={() => setOpen(!open)}>Contact</Link></li>
+        
        </ul>
             </div>}
         </div>
