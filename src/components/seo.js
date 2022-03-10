@@ -64,7 +64,7 @@ const SEO = ({ seo = {} }) => {
     }
     if (fullSeo.shareImage) {
       const imageUrl =
-        (process.env.API_URL || "http://localhost:8000") +
+        (process.env.API_URL || "https://nyccomedysites.co") +
         fullSeo.shareImage.localFile.publicURL
       tags.push(
         {
